@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-
 <body>
     <!-- Cabeçalho de navegação -->
     <header>
         <nav class="navbar">
-            <div class="logo">Restaurante XYZ</div>
+            <div class="logo">
+                <img src="img/the rooster.jpg" alt="Logo do Restaurante" class="logo-img">
+            </div>
             <ul class="nav-links">
                 <li><a href="#Burguers">Burguers</a></li>
                 <li><a href="#Acompanhamentos">Acompanhamentos</a></li>
@@ -26,7 +26,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Cardápio Gourmet Interativo</h1>
+            <h1>Cardápio THE ROOSTER</h1>
             <p>Explore as delícias de nossa cozinha</p>
         </div>
     </section>
@@ -34,73 +34,93 @@
     <!-- Carregamento dinâmico do menu -->
     <section class="menu-category" id="Burguers">
         <h2>Burguers</h2>
-        <div class="menu-items">
+        <div class="menu-items" id="burguers-list">
             <!-- Carregamento dinâmico via JavaScript -->
         </div>
     </section>
 
     <section class="menu-category" id="Acompanhamentos">
         <h2>Acompanhamentos</h2>
-        <div class="menu-items">
+        <div class="menu-items" id="acompanhamentos-list">
             <!-- Carregamento dinâmico via JavaScript -->
         </div>
     </section>
 
     <section class="menu-category" id="Cervejas">
         <h2>Cervejas Artesanais</h2>
-        <div class="menu-items">
+        <div class="menu-items" id="cervejas-list">
             <!-- Carregamento dinâmico via JavaScript -->
         </div>
     </section>
 
     <section class="menu-category" id="bebidas">
         <h2>Bebidas</h2>
-        <div class="menu-items">
+        <div class="menu-items" id="bebidas-list">
             <!-- Carregamento dinâmico via JavaScript -->
         </div>
     </section>
+
+    <!-- Modal -->
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <img id="modalImage" src="" alt="">
+        <div id="modalInfo">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+            <span id="modalPrice"></span>
+        </div>
+    </div>
+</div>
 
     <!-- WebGL para animações -->
     <script src="scripts.js"></script>
 
     <!-- Code injected by live-server -->
     <script>
-        // <![CDATA[  <-- For SVG support
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
+        // Dados de exemplo para os itens do cardápio
+        const menuItems = {
+            Burguers: [
+                { name: "Burguer Cordeiro Tasty", description: "Pão australiano chapeado...", price: "R$ 25,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203281955_qh8i_p.jpg" },
+                { name: "Burguer Mande In Roça", description: "Pão com gergelim...", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282029_wrRx_p.jpg" },
+                { name: "California", description: "Pão com gergelim...", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203281953_ZP9Q_p.jpg" }
+            ],
+            Acompanhamentos: [
+                { name: "Gouda Pillows", description: "Almofadinhas de queijo gouda...", price: "R$ 72,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282036_otjA_p.jpg" }
+            ],
+            Cervejas: [
+                { name: "Brotherhood 500ml", description: "Com chantilly", price: "R$ 18,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202204021617_8D67_i.jpg" }
+            ],
+            Bebidas: [
+                { name: "Suco de Laranja", description: "Refrescante", price: "R$ 10,00", img: "https://via.placeholder.com/300" }
+            ]
+        };
+
+        // Função para preencher o menu
+        function createMenuItems(category, items) {
+            const container = document.getElementById(`${category}-list`);
+            container.innerHTML = '';  // Limpa o conteúdo antes de adicionar novos itens
+
+            items.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('menu-item');
+
+                itemElement.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}">
+                    <div class="menu-item-content">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                        <span>${item.price}</span>
+                    </div>
+                `;
+                container.appendChild(itemElement);
+            });
         }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-        }
-        // ]]>
+
+        // Preencher os menus ao carregar a página
+        Object.keys(menuItems).forEach(category => {
+            createMenuItems(category, menuItems[category]);
+        });
     </script>
 </body>
-
 </html>

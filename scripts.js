@@ -74,5 +74,9 @@ function loadMenu() {
     });
 }
 
+
+
+
+
 // Chama a função para carregar os itens
 document.addEventListener('DOMContentLoaded', loadMenu);
