@@ -1,19 +1,19 @@
 // Dados de exemplo para os itens do cardápio
 const menuItems = {
     Burguers: [
-        { name: "Burguer Cordeiro Tasty", description: "Pão australiano chapeado na manteiga de garrafa, cebola roxa caramelizada, alface americana, burger de cordeiro de 180g, queijo mussarela e para finalizar aquele queijo parmesão maçaricado, completando essa maravilha.", price: "R$ 25,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203281955_qh8i_p.jpg" },
-        { name: "Burguer Mande In Roça", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de charque 180g, queijo muçarela, queijo coalho e para finalizar um delicioso melaço de cana de açúcar que vai fazer você babar.", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282029_wrRx_p.jpg" },
-        { name: "California", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino 180g, blend de queijo mussarela e cheddar, picles de pepino, finalizando com cebola roxa picada crua.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203281953_ZP9Q_p.jpg" },
-        { name: "Burguer Double Dream - 360g De Carne", description: "Pão australiano chapeado na manteiga de garrafa, cebola roxa caramelizada, alface americana, bacon, duplo cheddar melt, duas fatias de cheddar e 2 burgers de blend bovino de 180g, totalizando 360g de pura proteína, esse não é para qualquer um.", price: "R$ 25,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282027_LY6c_p.jpg" },
-        { name: "Creamy Pork Burger", description: "Pão com gergelim chapeado na manteiga de garrafa, pork loin burger de 180g (lombo suíno), cebola roxa caramelizada, queijo muçarela, bacon e, fazendo jus ao nome, um cremoso queijo Catupiry para finalizar sua cremosidade.", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282024_k1uq_p.jpg" },
-        { name: "Dream Cheddar", description: "Pão australiano chapeado na manteiga de garrafa, cebola roxa caramelizada, alface americana, burger de blend bovino 180g, bacon, fatia de cheddar e cheddar melt para finalizar essa belezura.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282028_QrSe_p.jpg" },
-        { name: "Gorgonzola Supreme", description: "Pão com gergelim chapeado na manteiga de garrafa, cebola roxa caramelizada, burger de blend bovino de 180g, queijo muçarela e para terminar um delicioso gorgonzola melt.", price: "R$ 25,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282029_S2Qh_p.jpg" },
-        { name: "Sheet Chilli King", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino 180g, queijo muçarela, queijo do reino, uma fantástica geleia de pimenta Tr, coroando essa obra com uma farofa rústica de milho caramelizado.", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282030_sn5u_p.jpg" },
-        { name: "The American Bacon", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino de 180g, queijo muçarela, alface americana, e muito. Mas muito bacon, garantindo o sabor americano.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282031_bbVt_p.jpg" },
-        { name: "The Classic", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino de 180g, queijo muçarela, alface americana e tomate. Esse é para aqueles que não gostam de muito mimimi.", price: "R$ 25,00", img: "img/the classic.jpg" },
-        { name: "The Dulce - Burger Novo", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino 180g, queijo muçarela, queijo coalho, doce de leite argentino, finalizando com uma farofa de bacon, fazendo assim a junção do doce com o salgado.", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202501011831_JH8C_i.jpg" },
-        { name: "Tropical Crispy Burguer", description: "Pão com gergelim chapeado na manteiga de garrafa, pork loin burger de 180g (lombo suíno), queijo muçarela, cubinhos de abacaxi grelhados com um toque especial de canela, finalizando com um crispy de couve para fechar esse clima tropical.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282033_tQzs_p.jpg" },
-        { name: "The Grill Burger", description: "Pão com gergelim chapeado na manteiga de garrafa, maionese defumada, burger de blend bovino 180g, onion rings, duplo queijo cheddar, farofa de bacon, finalizando com um toque de barbecue.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202401012031_R3lU_.jpeg" },
+        { id: 1, name: "Burguer Cordeiro Tasty", description: "Pão australiano chapeado na manteiga de garrafa, cebola roxa caramelizada, alface americana, burger de cordeiro de 180g, queijo mussarela e para finalizar aquele queijo parmesão maçaricado, completando essa maravilha.", price: "R$ 25,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203281955_qh8i_p.jpg" },
+        { id: 2, name: "Burguer Mande In Roça", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de charque 180g, queijo muçarela, queijo coalho e para finalizar um delicioso melaço de cana de açúcar que vai fazer você babar.", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282029_wrRx_p.jpg" },
+        { id: 3, name: "California", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino 180g, blend de queijo mussarela e cheddar, picles de pepino, finalizando com cebola roxa picada crua.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203281953_ZP9Q_p.jpg" },
+        { id: 4, name: "Burguer Double Dream - 360g De Carne", description: "Pão australiano chapeado na manteiga de garrafa, cebola roxa caramelizada, alface americana, bacon, duplo cheddar melt, duas fatias de cheddar e 2 burgers de blend bovino de 180g, totalizando 360g de pura proteína, esse não é para qualquer um.", price: "R$ 25,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282027_LY6c_p.jpg" },
+        { id: 5, name: "Creamy Pork Burger", description: "Pão com gergelim chapeado na manteiga de garrafa, pork loin burger de 180g (lombo suíno), cebola roxa caramelizada, queijo muçarela, bacon e, fazendo jus ao nome, um cremoso queijo Catupiry para finalizar sua cremosidade.", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282024_k1uq_p.jpg" },
+        { id: 6, name: "Dream Cheddar", description: "Pão australiano chapeado na manteiga de garrafa, cebola roxa caramelizada, alface americana, burger de blend bovino 180g, bacon, fatia de cheddar e cheddar melt para finalizar essa belezura.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282028_QrSe_p.jpg" },
+        { id: 7, name: "Gorgonzola Supreme", description: "Pão com gergelim chapeado na manteiga de garrafa, cebola roxa caramelizada, burger de blend bovino de 180g, queijo muçarela e para terminar um delicioso gorgonzola melt.", price: "R$ 25,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282029_S2Qh_p.jpg" },
+        { id: 8, name: "Sheet Chilli King", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino 180g, queijo muçarela, queijo do reino, uma fantástica geleia de pimenta Tr, coroando essa obra com uma farofa rústica de milho caramelizado.", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282030_sn5u_p.jpg" },
+        { id: 9, name: "The American Bacon", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino de 180g, queijo muçarela, alface americana, e muito. Mas muito bacon, garantindo o sabor americano.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282031_bbVt_p.jpg" },
+        { id: 10, name: "The Classic", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino de 180g, queijo muçarela, alface americana e tomate. Esse é para aqueles que não gostam de muito mimimi.", price: "R$ 25,00", img: "img/theclassic.jpg" },
+        { id: 11, name: "The Dulce - Burger Novo", description: "Pão com gergelim chapeado na manteiga de garrafa, burger de blend bovino 180g, queijo muçarela, queijo coalho, doce de leite argentino, finalizando com uma farofa de bacon, fazendo assim a junção do doce com o salgado.", price: "R$ 35,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202501011831_JH8C_i.jpg" },
+        { id: 12, name: "Tropical Crispy Burguer", description: "Pão com gergelim chapeado na manteiga de garrafa, pork loin burger de 180g (lombo suíno), queijo muçarela, cubinhos de abacaxi grelhados com um toque especial de canela, finalizando com um crispy de couve para fechar esse clima tropical.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282033_tQzs_p.jpg" },
+        { id: 13, name: "The Grill Burger", description: "Pão com gergelim chapeado na manteiga de garrafa, maionese defumada, burger de blend bovino 180g, onion rings, duplo queijo cheddar, farofa de bacon, finalizando com um toque de barbecue.", price: "R$ 40,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202401012031_R3lU_.jpeg" },
     ],
     Acompanhamentos: [
         { name: "Gouda Pillows (200g)", description: "Nessas almofadinhas de queijo gouda empanadas, acompanhadas da nossa geleia de pimenta Tr, uma combinação fantástica.", price: "R$ 72,00", img: "https://static.ifood-static.com.br/image/upload/t_medium/pratos/ea5221c2-9f51-4d6b-bb9d-be09646f967d/202203282036_otjA_p.jpg" },
@@ -62,21 +62,79 @@ function loadMenu() {
             const itemElement = document.createElement('div');
             itemElement.classList.add('menu-item');
             itemElement.innerHTML = `
-                <img src="${item.img}" alt="${item.name}">
-                <div class="content">
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                    <span class="price">${item.price}</span>
-                </div>
+                    <div class="test">
+                            <img src="${item.img}" alt="${item.name}">
+                        <div class="content">
+                            <h3>${item.name}</h3>
+                            <span class="price">${item.price}</span>
+                        </div>
+                    </div>
             `;
             categoryContainer.appendChild(itemElement);
+
+            itemElement.addEventListener("click", () => {
+                const franca = document.getElementById('franca')
+                franca.innerHTML = `
+                    <div class="flex">
+                            <img id="modalImage" src=${item.img} alt="">
+                        <div id="modalInfo">
+                            <h3 id="modalTitle">${item.name.toUpperCase()}</h3>
+                            <p id="modalDescription">${item.description}</p>
+                        <span id="modalPrice">${item.price}</span>
+                    </div>
+                `
+                openModal()
+            })
         });
     });
 }
 
-
-
-
-
 // Chama a função para carregar os itens
 document.addEventListener('DOMContentLoaded', loadMenu);
+
+function openModal() {
+    const containerModal = document.getElementById('itemModal')
+    containerModal.classList.add('active')
+}
+
+function closeMoldal() {
+    const containerModal = document.getElementById('itemModal')
+    containerModal.classList.remove('active')
+}
+
+
+// sair da modal
+const exitModal = document.getElementById('closeModal')
+exitModal.addEventListener('click', () => {
+    closeMoldal()
+})
+
+//sair da modal com o overlay
+const exitModalOverlay = document.getElementById('itemModal')
+exitModalOverlay.addEventListener('click', () => {
+    closeMoldal()
+})
+
+//função de stopPropagation que não deixa o clique no conteúdo fechar a modal
+const modalContent = document.querySelector(".modal-content");
+modalContent.addEventListener("click", (event) => {
+    event.stopPropagation();
+})
+
+//toggle menu
+function toggleMenu() {
+    let isOpen = false; // Use let para alterar o valor
+    const menuHamburger = document.getElementById('menu-toggle');
+    menuHamburger.addEventListener('click', (e) => {
+        isOpen = !isOpen; // Alterna o estado de isOpen
+        e.preventDefault();
+        const nav = document.getElementsByClassName('nav-links')[0]; // Acesse o primeiro item da coleção
+        if (isOpen) {
+            nav.classList.add('open'); // Use a classe 'open'
+        } else {
+            nav.classList.remove('open');
+        }
+    });
+}
+
+toggleMenu(); // Chame a função para ativar o evento

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,19 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
+
 <body>
     <!-- Cabeçalho de navegação -->
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <img src="img/the rooster.jpg" alt="Logo do Restaurante" class="logo-img">
-            </div>
+                <div class="logo">
+                    <img src="img/the rooster.jpg" alt="Logo do Restaurante" class="logo-img">
+                </div>
+                <div id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             <ul class="nav-links">
                 <li><a href="#Burguers">Burguers</a></li>
                 <li><a href="#Acompanhamentos">Acompanhamentos</a></li>
@@ -61,17 +68,13 @@
     </section>
 
     <!-- Modal -->
-<div id="itemModal" class="modal">
-    <div class="modal-content">
-        <span id="closeModal" class="close">&times;</span>
-        <img id="modalImage" src="" alt="">
-        <div id="modalInfo">
-            <h3 id="modalTitle"></h3>
-            <p id="modalDescription"></p>
-            <span id="modalPrice"></span>
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">x</span>
+            <div id="franca"></div>
         </div>
     </div>
-</div>
+    </div>
 
     <!-- WebGL para animações -->
     <script src="scripts.js"></script>
@@ -95,7 +98,6 @@
                 { name: "Suco de Laranja", description: "Refrescante", price: "R$ 10,00", img: "https://via.placeholder.com/300" }
             ]
         };
-
         // Função para preencher o menu
         function createMenuItems(category, items) {
             const container = document.getElementById(`${category}-list`);
@@ -123,4 +125,5 @@
         });
     </script>
 </body>
+
 </html>
